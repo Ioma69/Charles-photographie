@@ -1,0 +1,116 @@
+* {
+   margin: 0;
+   padding: 0;
+   font-family: 'Cormorant Infant', serif;
+   box-sizing: border-box;
+   
+}
+
+
+.welcomePage {
+  background-image: url("images/camera-g5f1f4faee_1920.jpg");
+  background-position:center;
+  background-repeat: no-repeat;
+  
+  
+}
+
+.imageStyle {
+  height: 100px;
+}
+
+.customColor {
+  background-color: #47555e;
+  opacity: 0.8;
+}
+
+.FontSizeTitle {
+  font-size: 4rem;
+  text-shadow: 2px 0 0 #1c2e4a, 0 2px 0 #1c2e4a, 0 -2px 0 #1c2e4a, -2px 0 0 #1c2e4a, 2px 2px 0 #1c2e4a, 2px -2px 0 #1c2e4a, -2px 2px 0 #1c2e4a, -2px -2px 0 #1c2e4a;
+} 
+
+.marginTitle {
+  margin-top: 475px;
+  text-shadow: 2px 0 0 #1c2e4a, 0 2px 0 #1c2e4a, 0 -2px 0 #1c2e4a, -2px 0 0 #1c2e4a, 2px 2px 0 #1c2e4a, 2px -2px 0 #1c2e4a, -2px 2px 0 #1c2e4a, -2px -2px 0 #1c2e4a;
+}
+
+.footerStyle {
+  background-color: #47555e;
+  height: 65px;
+  width: 100%;
+  opacity: 0.8;
+  letter-spacing: 1px;
+}
+
+.nav-item{
+  letter-spacing: 1px;
+}
+
+
+@media only screen and (min-width: 350px) and (max-width : 420px)  {
+  .fa-facebook
+  {
+   margin-right: 52px;
+  } 
+}
+
+@media only screen and (min-width:320px) and (max-width : 768px) {
+  .FontSizeTitle
+  {
+     font-size: 35px;
+  }
+
+  .fontSizeActivity
+  {
+     font-size: 24px;
+  }
+  
+}
+
+/* GALLERIE */ 
+
+.home {
+  margin-bottom: 125px;
+}
+
+.buttonStyle {
+  border: 1px solid  #c8ad7f;
+}
+
+.backgroundColor {
+  background-color: #f4f9ff;
+}
+
+.jetest {
+  margin-top: 170px;
+}
+
+.home .carousel-controls {
+position: absolute;
+top: 102%;
+bottom: 10px;
+}
+
+.home .carousel-indicators {
+  position: relative;
+  margin: 0;
+}
+
+.home .carousel-indicators button {
+  height: 70px;
+  width: 70px;
+  margin: 0 5px;
+  border-radius: 50%;
+  background-position: center;
+  background-size: cover;
+  border: 1px solid  #c8ad7f;
+  box-shadow: 2px 4px 7px 2px;
+}
+
+.customPhoto {
+  border: solid black 20px;
+  border-image: -webkit-linear-gradient(to right, #4286f4, #373B44);
+  border-image: linear-gradient(to right, #c8ad7f, #47555e);
+  border-image-slice: 1;
+  box-shadow: ;
+}

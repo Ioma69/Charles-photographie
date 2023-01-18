@@ -8,7 +8,7 @@
 
 
 .welcomePage {
-  background-image: url("images/camera-g5f1f4faee_1920.jpg");
+  background-image: url("images/fond\ Caméra.jpg");
   background-position:center;
   background-repeat: no-repeat;
   
@@ -113,4 +113,14 @@ bottom: 10px;
   border-image: linear-gradient(to right, #c8ad7f, #47555e);
   border-image-slice: 1;
   box-shadow: ;
+}
+
+.hide {
+  display: none;
+  margin-bottom: 0;
+}
+
+.show {
+  display: block;
+  margin-bottom: 20px;
 }

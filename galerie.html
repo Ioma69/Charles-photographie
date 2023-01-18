@@ -88,53 +88,56 @@
               <div class="container">
                 <div class="row">
                   <h3 class="text-center text-uppercase mb-5 mt-5">Decouvrez ma galerie photo</h3>
-                  <div class="row-cols-6 mb-5 d-flex justify-content-around">
-                    <button class="btn btn-dark">Bébé</button>
-                    <button class="btn btn-dark">Bébé</button>
-                    <button class="btn btn-dark">Bébé</button>
-                    <button class="btn btn-dark">Bébé</button>
-                    <button class="btn btn-dark">Bébé</button>
+                  <div class="items row-cols-12 mb-5 d-flex justify-content-center flex-wrap">
+                    <button class="item active btn btn-dark me-3 mt-2 d-flex justify-content-center" data-name="Tout">Tout</button>
+                    <button class="item btn btn-dark d-flex me-3 mt-2 justify-content-center" data-name="Mariage">Mariage</button>
+                    <button class="item btn btn-dark d-flex me-3 mt-2 justify-content-center" data-name="Famille">Famille</button>
+                    <button class="item btn btn-dark d-flex me-3 mt-2 justify-content-center" data-name="Grossesse">Grossesse</button>
+                    <button class="item btn btn-dark d-flex me-3 mt-2 justify-content-center" data-name="Bapteme">Bapteme</button>
+                    <button class="item btn btn-dark d-flex me-3 mt-2 justify-content-center" data-name="Portrait">Portrait</button>
+                    <button class="item btn btn-dark d-flex me-3 mt-2 justify-content-center" data-name="Couple">Couple</button>
                   </div>
-                  <div class="col-4">
-                    <div class="row mb-3">
-                      <img src="uploads/bapteme-1.jpg" alt="">
-                    </div>
-                    <div class="row mb-3">
-                      <img src="images/famille coucher de soleil.jpg" alt="">
-                    </div>
-                    <div class="row mb-3">
-                      <img src="images/famille coucher de soleil.jpg" alt="">
-                    </div>
-                    <div class="row mb-3">
-                      <img src="images/famille coucher de soleil.jpg" alt="">
+                  <div class="col-6" id="colOne">
+                    <div class="row active">
+                      <img src="images/famille coucher de soleil.jpg" class="image show" data-name="Famille" alt="">
                     </div>
                     <div class="row">
-                      <img src="images/famille coucher de soleil.jpg" alt="">
-                    </div>
-                  </div>
-                  <div class="col-4">
-                    <div class="row mb-3">
-                      <img src="images/Couple lecture.jpg" alt="">
-                    </div>
-                    <div class="row mb-3">
-                      <img src="images/Couple lecture.jpg" alt="">
-                    </div>
-                    <div class="row mb-3">
-                      <img src="images/Couple lecture.jpg" alt="">
+                      <img src="images/famille allongée.jpg" class="image" data-name="Famille" alt="">
                     </div>
                     <div class="row">
-                      <img src="images/Couple lecture.jpg" alt="">
+                      <img src="images/portrait femme.jpg" class="image" data-name="Portrait" alt="">
+                    </div>
+                    <div class="row">
+                      <img src="images/portrait homme.jpg" class="image" data-name="Portrait" alt="">
+                    </div>
+                    <div class="row">
+                      <img src="images/couple nuit.jpg" class="image" data-name="Couple" alt="">
+                    </div>
+                    <div class="row">
+                      <img src="images/couple lecture.jpg" class="image" data-name="Couple" alt="">
                     </div>
                   </div>
-                  <div class="col-4">
-                    <div class="row mb-3">
-                      <img src="images/famille mer.jpg" alt="">
+                  <div class="col-6" id="colTwo">
+                    <div class="row" >
+                      <img src="images/mariage.jpg" class="image" data-name="Mariage" alt="">
                     </div>
-                    <div class="row mb-3">
-                      <img src="images/famille mer.jpg" alt="">
+                    <div class="row">
+                      <img src="images/Couple mariés.jpg" class="image" data-name="Mariage" alt="">
                     </div>
-                    <div class="row mb-3">
-                      <img src="images/famille mer.jpg" alt="">
+                    <div class="row">
+                      <img src="images/bapteme 3.jpg" class="image" data-name="Bapteme" alt="">
+                    </div>
+                    <div class="row">
+                      <img src="images/bapteme 2.jpg" class="image" data-name="Bapteme" alt="">
+                    </div>
+                    <div class="row">
+                      <img src="images/grossesse.jpg" class="image" data-name="Grossesse" alt="">
+                    </div>
+                    <div class="row">
+                      <img src="images/grossesse 2.jpg" class="image" data-name="Grossesse" alt="">
+                    </div>
+                    <div class="row">
+                      <img src="images/grossesse 3.jpg" class="image" data-name="Grossesse" alt="">
                     </div>
                   </div>
                 </div>
@@ -147,5 +150,6 @@
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
         crossorigin="anonymous"></script>
+        <script src="script.js"></script>
 </body>
 </html>

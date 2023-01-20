@@ -3,12 +3,8 @@ const filterImg = document.querySelectorAll(".image");
 let col1 = document.getElementById("colOne");
 let col2 = document.getElementById("colTwo");
 
-filterItem.addEventListener("click",() => {   
-    sorting();
-});
 
-
-function sorting() { 
+onload = () => {
     filterItem.onclick = (selectedItem) => {
         if (selectedItem.target.classList.contains("item")){
             filterItem.querySelector(".active").classList.remove("active");

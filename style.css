@@ -11,9 +11,10 @@
   background-image: url("images/fond\ Caméra.jpg");
   background-position:center;
   background-repeat: no-repeat;
-  
-  
 }
+
+
+
 
 .imageStyle {
   height: 100px;
@@ -87,7 +88,7 @@
 }
 
 .backgroundColor {
-  background-color: #f4f9ff;
+  background-color: #e2ddd3;
 }
 
 .jetest {
@@ -255,13 +256,19 @@ body {
 }
 
 .left{
-  background: blueviolet;
+  background-image: url("images/fond.jpg");
+  background-position:center;
+  background-repeat: no-repeat;
+  opacity: 1;
   padding: 200px 93px;
+  border: solid 1px #af9f7d;
+  border-radius: 5px;
+  
+  
 }
 
 .left h2{
-  font-family: poppins;
-  color: #fff;
+  color: white;
   font-weight: 700;
   font-size: 48px;
 }
@@ -284,13 +291,12 @@ body {
 }
 
 .form-control {
-  border: 2px solid #000;
+  border: 2px solid #000000;
 }
 
 .right button{
   border: none;
   border-radius: 0;
-  background: #252525;
   width: 180px;
   color: #fff;
   padding: 15px 0;
@@ -301,8 +307,9 @@ body {
 }
 
 .right button:hover{
-  background: #252525;
+  background: #e2ddd3;
 }
+
 
 @media only screen and (min-width: 768px) and (max-width : 991px)  {
   .right i{
@@ -318,7 +325,7 @@ body {
     text-align: center;
   }
   .left h2 {
-    font-size: 25px;
+    font-size: 43px;
   }
   .right{
     padding: 25px;

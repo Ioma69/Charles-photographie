@@ -10,7 +10,7 @@
   integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Elsie:wght@400;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
     integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -27,7 +27,7 @@
                   aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                   <span class="navbar-toggler-icon"></span>
                 </button>
-                <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <div class="collapse navbar-collapse justify-content-end position-relative" id="navbarNav">
                   <ul class="navbar-nav d-flex flex-row justify-content-evenly flex-wrap">
                     <li class="nav-item">
                       <a class="nav-link active text-white text-decoration-underline fs-6" aria-current="page"
@@ -57,34 +57,8 @@
               </div>
             </nav>
         </header>
-        <main class="w-100 h-100">
-            <section class="d-flex justify-content-center w-100 home">
-                <div id="carouselExampleIndicators" class="carousel slide d-flex justify-content-center w-75">
-                  <div class="carousel-controls">
-                    <div class="carousel-indicators">
-                      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" style="background-image:url('images/bapteme.jpg');" aria-current="true" aria-label="Slide 1"></button>
-                      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" style="background-image:url('images/bapteme.jpg');" aria-label="Slide 2"></button>
-                      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" style="background-image:url('images/bapteme.jpg');" aria-label="Slide 3"></button>
-                      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" style="background-image:url('images/bapteme.jpg');" aria-label="Slide 4"></button>
-                    </div>
-                    </div>
-                    <div class="carousel-inner">
-                      <div class="carousel-item active jetest">
-                        <img src="images/bapteme.jpg" class="d-block w-100 customPhoto" alt="...">
-                      </div>
-                      <div class="carousel-item jetest">
-                        <img src="images/mariage.jpg" class="d-block w-100 customPhoto" alt="...">
-                      </div>
-                      <div class="carousel-item jetest">
-                        <img src="images/mariage.jpg" class="d-block w-100 customPhoto" alt="...">
-                      </div>
-                      <div class="carousel-item jetest">
-                        <img src="images/mariage.jpg" class="d-block w-100 customPhoto" alt="...">
-                      </div>
-                    </div>
-                  </div>
-            </section>
-            <section class="backgroundColor mb-5">
+        <main class="w-100 h-100 position-absolute customGallery">
+            <section class="backgroundColor">
               <div class="container">
                 <div class="row">
                   <h3 class="text-center text-uppercase mb-5 mt-5">Decouvrez ma galerie photo</h3>

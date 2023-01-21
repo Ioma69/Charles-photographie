@@ -1,7 +1,7 @@
 * {
    margin: 0;
    padding: 0;
-   font-family: 'Cormorant Infant', serif;
+   font-family: 'Elsie', cursive;
    box-sizing: border-box;
    
 }
@@ -95,33 +95,13 @@
   margin-top: 200px;
 }
 
-.home .carousel-controls {
-position: absolute;
-top: 102%;
-bottom: 10px;
-}
-
-.home .carousel-indicators {
-  position: relative;
-  margin: 0;
-}
-
-.home .carousel-indicators button {
-  height: 70px;
-  width: 70px;
-  margin: 0 5px;
-  border-radius: 50%;
-  background-position: center;
-  background-size: cover;
-  border: 1px solid  #c8ad7f;
-  box-shadow: 2px 4px 7px 2px;
-}
-
-.customPhoto {
-  border: solid black 20px;
-  border-image: -webkit-linear-gradient(to right, #4286f4, #373B44);
-  border-image: linear-gradient(to right, #47555e, #999999);
-  border-image-slice: 1;
+.customGallery {
+  margin-top: 125px;
+  color: #47555e;
+  font-weight:400;
+  font-size: 80px;
+  text-shadow: 2px 4px 3px rgba(0,0,0,0.3);
+  text-decoration: overline solid 1.5px #47555e;
 }
 
 .hide {
@@ -248,7 +228,7 @@ body {
 }
 
 .form-area {
-  padding-top: 5%;
+  padding-top: 2%;
 }
 
 .row.single-form {
@@ -267,10 +247,11 @@ body {
   
 }
 
+
 .left h2{
   color: white;
-  font-weight: 700;
-  font-size: 48px;
+  font-weight:bolder;
+  font-size: 55px;
 }
 
 .left h2 span {
@@ -311,15 +292,7 @@ body {
 }
 
 
-@media only screen and (min-width: 768px) and (max-width : 991px)  {
-  .right i{
-    top: -52px;
-    transform: rotate(90deg);
-    left: 50%;
-  }
-}
- 
-@media only screen and (max-width: 767px){
+@media only screen and (max-width: 991px){
   .left {
     padding: 90px 15px;
     text-align: center;
@@ -338,6 +311,9 @@ body {
   .right bottom{
     width: 150px;
     padding: 12px 0;
+  }
+  div h1 {
+    margin-top: 55px;
   }
 }
 

@@ -14,8 +14,6 @@
 }
 
 
-
-
 .imageStyle {
   height: 100px;
 }
@@ -47,18 +45,25 @@
   letter-spacing: 1px;
 }
 
+
+.nav-link:hover {
+  color: #b68f3c !important;
+  text-decoration: underline;
+  font-weight: bold;
+}
+
 .heightActivity{
   height: 100%;
 }
 
-@media only screen and (min-width: 350px) and (max-width : 432px)  {
-  .fa-facebook
+@media only screen and (min-width: 360px) and (max-width : 453px)  {
+  .customFacebook
   {
-   margin-right: 64px;
+   margin-right: 65px;
   } 
 }
 
-@media only screen and (min-width:320px) and (max-width : 768px) {
+@media only screen and (min-width:3p20x) and (max-width : 768px) {
   .FontSizeTitle
   {
      font-size: 35px;
@@ -83,9 +88,6 @@
   margin-bottom: 125px;
 }
 
-.buttonStyle {
-  border: 1px solid  #c8ad7f;
-}
 
 .backgroundColor {
   background-color: #e2ddd3;
@@ -95,14 +97,23 @@
   margin-top: 200px;
 }
 
+
+.customPhoto {
+  border-radius: 35px;
+}
+
 .customGallery {
-  margin-top: 125px;
   color: #47555e;
   font-weight:400;
-  font-size: 80px;
+  font-size: 60px;
   text-shadow: 2px 4px 3px rgba(0,0,0,0.3);
   text-decoration: overline solid 1.5px #47555e;
 }
+
+.customMarginGallery {
+  margin-top: 140px;
+}
+
 
 .hide {
   display: none;
@@ -118,6 +129,20 @@
   margin-bottom: 20px;
 }
 
+@media only screen and (min-width: 320px) and (max-width : 400px)  {
+  .customGallery{
+    font-size: 35px;
+  }
+}
+
+@media only screen and (min-width: 400px) and (max-width : 493px)  {
+  .customGallery{
+    font-size: 45px;
+  }
+}
+
+
+
 /* PRESTATIONS */ 
 
 .servicesprice {
@@ -126,7 +151,6 @@
 
 .card {
   box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
-  overflow: hidden;
   border-radius: 15px;
 }
 
@@ -135,6 +159,7 @@
   border-top-right-radius: 15px;
   border-top-left-radius: 15px;
   width: 100%;
+
 }
 
 .img2 img {
@@ -156,15 +181,15 @@
 }
 
 .mainText {
-  padding: 30px 0;
+  padding-top: 15x;
   text-align: center;
+  height: 200px;
 }
 
 .mainText h2 {
   text-transform: uppercase;
   font-weight: 900;
   font-size: 20px;
-  margin: 0 0 20px;
 }
 
 .mainText p {
@@ -172,15 +197,16 @@
   padding: 0 35px;
 }
 
-.networks {
+.prices {
   text-align: center;
   padding-bottom: 20px;
-}
-
-.networks i {
   font-size: 20px;
   color: darkcyan;
+  
+  
 }
+
+
 
 
 @media only screen and (min-width: 320px) and (max-width : 767px)  {
@@ -201,21 +227,37 @@
     margin-top: 200px;
     margin-bottom: 48px;
   }
-  .margintopService3 
-  {
-    margin-bottom: 48px;
-  }
+ 
 
 }
 
+@media only screen and (min-width: 991px) and (max-width : 1199px)  {
+
+  .margintopService3 {
+    margin-top: 48px;
+  }
+}
+
+@media only screen and (min-width: 1200px) and (max-width : 3000px) {
+
+  .margintopService3 {
+    margin-top: 200px;
+  }
+}
+
+
 @media only screen and (min-width: 991px) and (max-width : 3000px)  {
-  .margintopService1,.margintopService2,.margintopService3
+  .margintopService1,.margintopService2
   {
     margin-top: 200px;
     
   }
 
+
+
 }
+
+
 
 .marginFooter {
   margin-top: 73px;
@@ -223,12 +265,10 @@
 
 /*Contact*/
 
-body {
-  background: red;
-}
+
 
 .form-area {
-  padding-top: 2%;
+  padding-top: 1px;
 }
 
 .row.single-form {
@@ -240,7 +280,7 @@ body {
   background-position:center;
   background-repeat: no-repeat;
   opacity: 1;
-  padding: 200px 93px;
+  padding: 175px 93px;
   border: solid 1px #af9f7d;
   border-radius: 5px;
   
@@ -259,7 +299,7 @@ body {
 }
 
 .right{
-  padding: 70px 100px; 
+  padding: 60px 100px; 
   position: relative;
 }
 
@@ -289,19 +329,22 @@ body {
 
 .right button:hover{
   background: #e2ddd3;
+  color: #47555e;
 }
 
-
+.marginContainer{
+  margin-bottom: 50px;
+}
 @media only screen and (max-width: 991px){
   .left {
-    padding: 90px 15px;
+    padding: 50px 15px;
     text-align: center;
   }
   .left h2 {
-    font-size: 43px;
+    font-size: 40px;
   }
   .right{
-    padding: 25px;
+    padding: 20px;
   }
   .right i{
     top: -52px;
@@ -315,7 +358,20 @@ body {
   div h1 {
     margin-top: 55px;
   }
+
+  .marginContainer{
+    margin-top: 60px;
+  }
 }
+
+
+
+
+
+
+
+
+
 
 
 

@@ -9,6 +9,8 @@ fields:
   label: image
   default: "/uploads/fondcamera.jpg"
 pages:
+- images/picture1.md.md
+- images/picture2.md.md
 - images/picturetest.md
 - images/picturetest.md-copy.md
 - images/testi.md

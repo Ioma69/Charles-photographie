@@ -1,4 +1,4 @@
 ---
-image: "/uploads/portrait-homme.jpg"
+image: "/images/Grossesse 2.jpg"
 
 ---

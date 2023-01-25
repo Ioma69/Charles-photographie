@@ -8,10 +8,3 @@ fields:
     maxSize: 64
   label: image
   default: "/uploads/fondcamera.jpg"
-pages:
-- images/picture1.md.md
-- images/picture2.md.md
-- images/picture3.md.md
-- images/picture4.md.md
-- images/picture5.md.md
-- images/picture6.md.md

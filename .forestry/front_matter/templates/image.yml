@@ -10,4 +10,5 @@ fields:
   default: "/uploads/fondcamera.jpg"
 pages:
 - images/picturetest.md
+- images/picturetest.md-copy.md
 - images/testi.md

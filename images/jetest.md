@@ -1,0 +1,4 @@
+---
+image: "/uploads/fondcamera.jpg"
+
+---

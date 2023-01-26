@@ -7,6 +7,6 @@ fields:
   config:
     maxSize: 64
   label: image
-  default: "/uploads/fondcamera.jpg"
+  default: "/images/fond.jpg"
 pages:
 - images/jetest.md

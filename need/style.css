@@ -1,0 +1,403 @@
+* {
+   margin: 0;
+   padding: 0;
+   font-family: 'Elsie', cursive;
+   box-sizing: border-box;
+   
+}
+
+
+.welcomePage {
+  background-image: url("images/fond\ Caméra.jpg");
+  background-position:center;
+  background-repeat: no-repeat;
+  
+}
+
+
+.imageStyle {
+  height: 100px;
+}
+
+.customColor {
+  background-color: #47555e;
+  opacity: 0.8;
+}
+
+.fontsizeTitle {
+  font-size: 4rem;
+  text-shadow: 2px 0 0 #1c2e4a, 0 2px 0 #1c2e4a, 0 -2px 0 #1c2e4a, -2px 0 0 #1c2e4a, 2px 2px 0 #1c2e4a, 2px -2px 0 #1c2e4a, -2px 2px 0 #1c2e4a, -2px -2px 0 #1c2e4a;
+} 
+
+.marginTitle {
+  margin-top: 250px;
+  text-shadow: 2px 0 0 #1c2e4a, 0 2px 0 #1c2e4a, 0 -2px 0 #1c2e4a, -2px 0 0 #1c2e4a, 2px 2px 0 #1c2e4a, 2px -2px 0 #1c2e4a, -2px 2px 0 #1c2e4a, -2px -2px 0 #1c2e4a;
+}
+
+.footerStyle {
+  background-color: #47555e;
+  height: 65px;
+  width: 100%;
+  opacity: 0.8;
+  letter-spacing: 1px;
+}
+
+.nav-item{
+  letter-spacing: 1px;
+}
+
+
+.nav-link:hover {
+  color: #b68f3c !important;
+  text-decoration: underline;
+  font-weight: bold;
+}
+
+.heightActivity{
+  height: 100%;
+}
+
+@media only screen and (min-width: 360px) and (max-width : 453px)  {
+  .customFacebook
+  {
+   margin-right: 65px;
+  } 
+}
+
+@media only screen and (min-width:320px) and (max-width : 768px) {
+  .fontsizeTitle
+  {
+     font-size: 35px;
+  }
+
+  .fontsizeActivity
+  {
+     font-size: 24px;
+  }
+
+}
+
+
+
+/* GALLERIE */ 
+
+.home {
+  margin-bottom: 125px;
+}
+
+
+.backgroundColor {
+  background-color: #e2ddd3;
+}
+
+.jetest {
+  margin-top: 200px;
+}
+
+
+.customPhoto {
+  border-radius: 35px;
+}
+
+.customGallery {
+  color: #47555e;
+  font-weight:400;
+  font-size: 60px;
+  text-shadow: 2px 4px 3px rgba(0,0,0,0.3);
+  text-decoration: overline solid 1.5px #47555e;
+}
+
+.customMarginGallery {
+  margin-top: 140px;
+}
+
+
+.hide {
+  display: none;
+  margin-bottom: 0;
+}
+
+.show  {
+  display: block;
+  margin-bottom: 20px;
+}
+
+.marginAll {
+  margin-bottom: 20px;
+}
+
+@media only screen and (min-width: 320px) and (max-width : 400px)  {
+  .customGallery{
+    font-size: 35px;
+  }
+}
+
+@media only screen and (min-width: 400px) and (max-width : 493px)  {
+  .customGallery{
+    font-size: 45px;
+  }
+}
+
+
+
+/* PRESTATIONS */ 
+
+.servicesprice {
+  padding: 80px 0;
+}
+
+.card {
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+  border-radius: 15px;
+}
+
+.img1 img {
+  height: 200px;
+  border-top-right-radius: 15px;
+  border-top-left-radius: 15px;
+  width: 100%;
+
+}
+
+.img2 img {
+  position: relative;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  z-index: 1;
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  border: 7px solid #ffff;
+  margin-top: -80px;
+}
+
+.card:hover .img2 img {
+  border-color:  #47555e;
+  transition: .7s;
+}
+
+.mainText {
+  padding-top: 15x;
+  text-align: center;
+  height: 264px;
+}
+
+.mainText h2 {
+  text-transform: uppercase;
+  font-weight: 900;
+  font-size: 20px;
+}
+
+.mainText p {
+  font-size: 16px;
+  padding: 0 35px;
+}
+
+.prices {
+  text-align: center;
+  padding-bottom: 20px;
+  font-size: 20px;
+  color: #47555e;
+  
+  
+}
+
+
+
+
+@media only screen and (min-width: 320px) and (max-width : 767px)  {
+  .margintopService1
+  {
+   margin-top: 200px;
+   margin-bottom: 48px;
+  } 
+  .margintopService2,.margintopService3,.margintopService4,.margintopService5
+  {
+    margin-bottom: 48px;
+  }
+}
+
+@media only screen and (min-width: 767px) and (max-width : 991px)  {
+  .margintopService1,.margintopService2
+  {
+    margin-top: 200px;
+    margin-bottom: 48px;
+  }
+ 
+
+}
+
+@media only screen and (min-width: 991px) and (max-width : 1199px)  {
+
+  .margintopService3 {
+    margin-top: 48px;
+  }
+}
+
+@media only screen and (min-width: 1200px) and (max-width : 3000px) {
+
+  .margintopService3 {
+    margin-top: 200px;
+  }
+}
+
+
+@media only screen and (min-width: 991px) and (max-width : 3000px)  {
+  .margintopService1,.margintopService2
+  {
+    margin-top: 200px;
+    
+  }
+
+
+
+}
+
+.marginFooter {
+  margin-top: 73px;
+}
+
+/*Contact*/
+
+.formPhoto {
+  background-image: url("images/photo\ contact.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+
+form p {
+  color: #47555e;
+  box-shadow: 0 1px 2px 4px;
+}
+
+.row.singleForm {
+  box-shadow: 0 2px 20px -5px rgba(0, 0, 0, 0.5);
+  height: 535px;
+  width: 600px;
+}
+
+.left{
+  background-image: url("images/fond.jpg");
+  background-position:center;
+  background-repeat: no-repeat;
+}
+
+
+.right button:hover{
+  background: #e2ddd3;
+  color: #47555e;
+}
+
+.form-control {
+  margin-top: 0;
+}
+
+.marginTopForm, .marginBottomContact{
+  margin-top: 24px;
+}
+
+.marginBottomForm {
+  margin-bottom: 16px;
+}
+
+.marginTopButton {
+  margin-top: 48px
+}
+
+.heightForm {
+  height: 100%;
+}
+
+.MarginForm {
+  margin-top: 48px;
+}
+
+@media only screen and (min-width: 320px) and (max-width : 500px)  {
+
+  .row.singleForm {
+    width: 290px;
+
+  }
+}
+
+@media only screen and (min-width: 500px) and (max-width : 650px)  {
+
+  .row.singleForm {
+    width: 450px;
+
+  }
+
+  .MarginForm {
+    margin-top: 120px;
+  }
+}
+
+@media only screen and (min-height:450px) and (max-height : 700px)  {
+
+  .marginBottomForm,.marginBottomContact,.marginTopButton,.marginBottomForm,.marginTopForm {
+    margin: 0;
+  }
+
+  .heightForm {
+    height: 52%;
+  }
+
+  .MarginForm {
+    margin-top: 325px;
+  }
+
+  .formFont {
+    font-size: 12px;
+  }
+
+  form p {
+    box-shadow: none;
+  }
+}
+
+
+
+@media only screen and (min-height:700px) and (max-height : 850px)  {
+
+  .marginBottomForm,.marginBottomContact,.marginTopButton,.marginBottomForm {
+
+    margin:0;
+    margin-top: 25px;
+    padding-top: 10px;
+    
+  }
+
+  .heightForm {
+    height: 90%;
+  }
+
+  .MarginForm {
+    margin-top: 120px;
+  }
+
+}
+
+@media only screen and (min-height:850px) and (max-height : 950px)  {
+  .MarginForm {
+    margin-top: 50px;
+  }
+}
+
+@media only screen and (min-height:950px) and (max-height : 1100px)  {
+  .MarginForm {
+    margin-top: 0;
+  }
+  
+  .heightForm {
+    height: 110%;
+  }
+  
+}
+
+
+
+
+
+

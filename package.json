@@ -1,0 +1,24 @@
+{
+  "name": "ecf-entrainement",
+  "version": "1.0.0",
+  "description": "",
+  "main": "script.js",
+  "scripts": {
+    "start": "eleventy --serve",
+    "build": "eleventy"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Ioma69/ECF-ENTRAINEMENT-STUDY.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Ioma69/ECF-ENTRAINEMENT-STUDY/issues"
+  },
+  "homepage": "https://github.com/Ioma69/ECF-ENTRAINEMENT-STUDY#readme",
+  "devDependencies": {
+    "@11ty/eleventy": "^1.0.2"
+  }
+}

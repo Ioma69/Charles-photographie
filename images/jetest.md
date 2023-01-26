@@ -1,4 +1,4 @@
 ---
-image: "/uploads/fondcamera.jpg"
+image: "/images/fond.jpg"
 
 ---

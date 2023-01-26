@@ -8,5 +8,3 @@ fields:
     maxSize: 64
   label: image
   default: "/uploads/fondcamera.jpg"
-pages:
-- images/portrait.html

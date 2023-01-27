@@ -9,6 +9,8 @@ sections:
   label: changepicture
   create: all
   match: "**/*"
+  templates:
+  - image
 upload_dir: images
 public_path: "/images"
 front_matter_path: ''

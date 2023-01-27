@@ -1,4 +1,4 @@
 ---
-image: "/images/fond.jpg"
+image: "/images/bapteme-1.jpg"
 
 ---

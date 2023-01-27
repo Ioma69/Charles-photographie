@@ -8,5 +8,3 @@ fields:
     maxSize: 64
   label: image
   default: "/images/bapteme-1.jpg"
-pages:
-- images/jetest.md

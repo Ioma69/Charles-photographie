@@ -41,21 +41,22 @@ layout: 'base2.njk'
       <p class="footerStyle text-white position-absolute bottom-0 text-center m-0 d-flex flex-column justify-content-center fs-6">@2023 Charles Cantin Photographie <br> Tout Droits Reservés</p>
     </footer>
   </main>
-  <script>
   <script src="https://www.google.com/recaptcha/enterprise.js?render=6Lc_z50mAAAAAAQq4NxKTTBPSyoHCSv2nJ7B9qOZ"></script>
-  function validateForm(event) {
-    event.preventDefault();
-    grecaptcha.enterprise.ready(async () => {
-      const token = await grecaptcha.enterprise.execute('6Lc_z50mAAAAAAQq4NxKTTBPSyoHCSv2nJ7B9qOZ', { action: 'submit' });
-      // Envoyez le jeton (token) et les autres données du formulaire à votre backend pour validation
-      // Effectuez les vérifications nécessaires du reCAPTCHA côté serveur avant de traiter le formulaire
-      // Si le reCAPTCHA est valide, vous pouvez soumettre le formulaire et effectuer les actions requises
-      // Sinon, vous pouvez afficher un message d'erreur ou bloquer la soumission du formulaire
-      document.forms['contact'].submit(); // Soumettez le formulaire
-    });
-    return false; // Empêchez la soumission normale du formulaire
-  }
+<script>
+function validateForm(event) {
+  event.preventDefault();
+  grecaptcha.enterprise.ready(async () => {
+    const token = await grecaptcha.enterprise.execute('6Lc_z50mAAAAAAQq4NxKTTBPSyoHCSv2nJ7B9qOZ', { action: 'submit' });
+    // Envoyez le jeton (token) et les autres données du formulaire à votre backend pour validation
+    // Effectuez les vérifications nécessaires du reCAPTCHA côté serveur avant de traiter le formulaire
+    // Si le reCAPTCHA est valide, vous pouvez soumettre le formulaire et effectuer les actions requises
+    // Sinon, vous pouvez afficher un message d'erreur ou bloquer la soumission du formulaire
+    document.forms['contact'].submit(); // Soumettez le formulaire
+  });
+  return false; // Empêchez la soumission normale du formulaire
+}
 </script>
+
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
     crossorigin="anonymous"></script>

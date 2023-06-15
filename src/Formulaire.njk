@@ -9,7 +9,7 @@ layout: 'base2.njk'
       <div class="w-100 MarginForm">
         <div class="row singleForm">
           <div class="col-12 d-flex align-items-center backgroundColor heightForm">
-            <form name="contact" method="POST" data-netlify="true" data-netlify-recaptcha="true" netlify-honeypot="bot-field" class="w-100 formFont">
+            <form name="contact" method="POST" id="contact-form" data-netlify="true" data-netlify-recaptcha="true" netlify-honeypot="bot-field" class="w-100 formFont">
               <div style="display: none;">
                 <label>Ne pas remplir si vous êtes humain : <input name="bot-field" /></label>
               </div>
@@ -29,7 +29,8 @@ layout: 'base2.njk'
                 <label for="exampleInputPassword1">Message</label>
                 <textarea class="form-control" id="exampleInputPassword1" placeholder="Votre message"></textarea>
               </div>
-              <button type="submit" class="btn btn-secondary marginTopButton" onclick="onClick(e)">Envoyer</button>
+              <input type="hidden" name="captcha-token" id="captcha-token">
+              <button type="submit" data-callback="onCaptchaSubmit" class="btn btn-secondary marginTopButton" onclick="onClick(e)">Envoyer</button>
             </form>
           </div> 
         </div>
@@ -43,15 +44,17 @@ layout: 'base2.njk'
 <script src="https://www.google.com/recaptcha/enterprise.js?render=6Lds650mAAAAACiQxU7qUPYtczQb_3IWihmYWFeq"></script>
 <script>
   function onClick(e) {
-    e.preventDefault();
-    grecaptcha.enterprise.ready(async () => {
-      const token = await grecaptcha.enterprise.execute('6Lds650mAAAAACiQxU7qUPYtczQb_3IWihmYWFeq', {action: 'submit'});
-      // IMPORTANT: The 'token' that results from execute is an encrypted response sent by
-      // reCAPTCHA Enterprise to the end user's browser.
-      // This token must be validated by creating an assessment.
-      // See https://cloud.google.com/recaptcha-enterprise/docs/create-assessment
-    });
-  }
+  e.preventDefault();
+  grecaptcha.ready(() => {
+    grecaptcha.execute('6Lds650mAAAAACiQxU7qUPYtczQb_3IWihmYWFeq', { action: 'submit' })
+      .then((token) => {
+        // Ajoutez le token du captcha à votre formulaire (par exemple, à un champ caché)
+        document.getElementById('captcha-token').value = token;
+        // Soumettez le formulaire
+        document.getElementById('contact-form').submit();
+      });
+  });
+}
 </script>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"

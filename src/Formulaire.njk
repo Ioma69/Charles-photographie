@@ -9,10 +9,7 @@ layout: 'base2.njk'
       <div class="w-100 MarginForm">
         <div class="row singleForm">
           <div class="col-12 d-flex align-items-center backgroundColor heightForm">
-            <form name="contact" method="POST" data-netlify-recaptcha="true"  data-netlify="true" id="contact-form" netlify-honeypot="bot-field" class="w-100 formFont">
-              <div style="display: none;">
-                <label>Ne pas remplir si vous êtes humain : <input name="bot-field" /></label>
-              </div>
+            <form name="contact" method="POST" data-netlify="true" id="contact-form" class="w-100 formFont">
               <div>
                 <p class="marginBottomContact fs-1">Contactez-moi</p>
               </div>
@@ -30,8 +27,9 @@ layout: 'base2.njk'
                 <textarea class="form-control" id="message" placeholder="Votre message"></textarea>
               </div>
               <div data-netlify-recaptcha="true"></div>
+              <input type="hidden" name="form-name" value="contact">
               <input type="hidden" name="captcha-token" id="captcha-token">
-              <button type="submit" class="btn btn-secondary marginTopButton" onclick="onCaptchaSubmit(e)">Envoyer</button>
+              <button type="submit" class="btn btn-secondary marginTopButton" onclick="onCaptchaSubmit(event)">Envoyer</button>
             </form>
           </div> 
         </div>
@@ -44,8 +42,8 @@ layout: 'base2.njk'
 </main>
 <script src="https://www.google.com/recaptcha/enterprise.js?render=6LcBhp4mAAAAANWaCxxMqgMs4K2QhCXX02eV4ylw"></script>
 <script>
-  function onCaptchaSubmit(e) {
-  e.preventDefault();
+  function onCaptchaSubmit(event) {
+  event.preventDefault();
   grecaptcha.ready(() => {
     grecaptcha.execute('6LcBhp4mAAAAANWaCxxMqgMs4K2QhCXX02eV4ylw', { action: 'submit' })
       .then((token) => {

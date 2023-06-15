@@ -9,7 +9,7 @@ layout: 'base2.njk'
       <div class="w-100 MarginForm">
         <div class="row singleForm">
           <div class="col-12 d-flex align-items-center backgroundColor heightForm">
-            <form name="contact" method="POST" id="contact-form" data-netlify="true" netlify-honeypot="bot-field" class="w-100 formFont">
+            <form name="contact" method="POST" data-netlify-recaptcha="true" id="contact-form" data-netlify="true" netlify-honeypot="bot-field" class="w-100 formFont">
               <div style="display: none;">
                 <label>Ne pas remplir si vous êtes humain : <input name="bot-field" /></label>
               </div>
@@ -17,17 +17,17 @@ layout: 'base2.njk'
                 <p class="marginBottomContact fs-1">Contactez-moi</p>
               </div>
               <div class="form-group marginBottomForm">
-                <label for="exampleInputEmail1">Nom</label>
-                <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Votre nom">
+                <label for="name">Nom</label>
+                <input type="text" class="form-control" id="name" aria-describedby="emailHelp" placeholder="Votre nom">
                 <div id="emailHelp" class="form-text"></div>
               </div>
               <div class="form-group marginTopForm">
-                <label for="exampleInputPassword1">E-mail</label>
-                <input type="email" class="form-control" id="exampleInputPassword1" placeholder="Votre E-mail">
+                <label for="mail">E-mail</label>
+                <input type="email" class="form-control" id="mail" placeholder="Votre E-mail">
               </div>
               <div class="form-group marginTopForm">
-                <label for="exampleInputPassword1">Message</label>
-                <textarea class="form-control" id="exampleInputPassword1" placeholder="Votre message"></textarea>
+                <label for="message">Message</label>
+                <textarea class="form-control" id="message" placeholder="Votre message"></textarea>
               </div>
               <input type="hidden" name="captcha-token" id="captcha-token">
               <button type="submit" data-callback="onCaptchaSubmit" class="btn btn-secondary marginTopButton" onclick="onClick(e)">Envoyer</button>

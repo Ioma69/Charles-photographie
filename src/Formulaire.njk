@@ -50,9 +50,9 @@ layout: 'base2.njk'
   grecaptcha.ready(() => {
     grecaptcha.execute('6LcBhp4mAAAAANWaCxxMqgMs4K2QhCXX02eV4ylw', { action: 'submit' })
       .then((token) => {
-        // Ajoutez le token du captcha à votre formulaire (par exemple, à un champ caché)
+        // Ajoute le token du captcha à votre formulaire (par exemple, à un champ caché)
         document.getElementById('captcha-token').value = token;
-        // Soumettez le formulaire
+        // Soumettre le formulaire
         document.getElementById('contact-form').submit();
       });
   });

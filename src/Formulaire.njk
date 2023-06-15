@@ -45,7 +45,7 @@ layout: 'base2.njk'
   function onClick(e) {
     e.preventDefault();
     grecaptcha.enterprise.ready(async () => {
-      const token = await grecaptcha.enterprise.execute('6Lds650mAAAAACiQxU7qUPYtczQb_3IWihmYWFeq', {action: 'contact'});
+      const token = await grecaptcha.enterprise.execute('6Lds650mAAAAACiQxU7qUPYtczQb_3IWihmYWFeq', {action: 'submit'});
       // IMPORTANT: The 'token' that results from execute is an encrypted response sent by
       // reCAPTCHA Enterprise to the end user's browser.
       // This token must be validated by creating an assessment.

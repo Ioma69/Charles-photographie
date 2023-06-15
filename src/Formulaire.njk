@@ -45,7 +45,7 @@ layout: 'base2.njk'
   function validateForm(event) {
     event.preventDefault();
     grecaptcha.enterprise.ready(async () => {
-      const token = await grecaptcha.enterprise.execute('YOUR_RECAPTCHA_SITE_KEY', { action: 'submit' });
+      const token = await grecaptcha.enterprise.execute('6Lc_z50mAAAAAAQq4NxKTTBPSyoHCSv2nJ7B9qOZ', { action: 'submit' });
       // Envoyez le jeton (token) et les autres données du formulaire à votre backend pour validation
       // Effectuez les vérifications nécessaires du reCAPTCHA côté serveur avant de traiter le formulaire
       // Si le reCAPTCHA est valide, vous pouvez soumettre le formulaire et effectuer les actions requises

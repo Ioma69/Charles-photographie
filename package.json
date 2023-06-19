@@ -20,5 +20,8 @@
   "homepage": "https://github.com/Ioma69/ECF-ENTRAINEMENT-STUDY#readme",
   "devDependencies": {
     "@11ty/eleventy": "^1.0.2"
+  },
+  "dependencies": {
+    "contentful": "^10.2.4"
   }
 }

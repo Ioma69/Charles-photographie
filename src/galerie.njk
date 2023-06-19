@@ -17,52 +17,54 @@ layout: 'base2.njk'
           <button class="item btn btn-secondary d-flex me-3 mt-2 justify-content-center shadow" data-name="Portrait">Portrait</button>
           <button class="item btn btn-secondary d-flex me-3 mt-2 justify-content-center shadow" data-name="Couple">Couple</button>
         </div>
-        <div class="col-6" id="colOne">
-          <div class="row active">
-            {% for item in collections.gallery %}
-              {% if item.data.dataName == "Famille" %}
-                <img src="/images/{{ item.data.src }}" class="customPhoto image marginAll" data-name="{{ item.data.dataName }}" alt="{{ item.data.alt }}">
-              {% endif %}
-            {% endfor %}
-          </div>
-          <div class="row">
-            {% for item in collections.gallery %}
-              {% if item.data.dataName == "Portrait" %}
-               <img src="/images/{{ item.data.src }}" class="customPhoto image marginAll" data-name="{{ item.data.dataName }}" alt="{{ item.data.alt }}">
-              {% endif %}
-            {% endfor %}
-          </div>
-          <div class="row">
-            {% for item in collections.gallery %}
-              {% if item.data.dataName == "Couple" %}
-                <img src="/images/{{ item.data.src }}" class="customPhoto image marginAll" data-name="{{ item.data.dataName }}" alt="{{ item.data.alt }}">
-              {% endif %}
-            {% endfor %}
-          </div>
+       <div class="col-6" id="colOne">
+        <div class="row active">
+          {% for item in collections.gallery %}
+            {% if item.data.dataName == "Famille" %}
+              <img src="/images/{{ item.data.filename }}" class="customPhoto image marginAll" data-name="{{ item.data.dataName }}" alt="{{ item.data.alt }}">
+            {% endif %}
+          {% endfor %}
         </div>
-        <div class="col-6" id="colTwo">
-          <div class="row">
-            {% for item in collections.gallery %}
-              {% if item.data.dataName == "Mariage" %}
-                <img src="/images/{{ item.data.src }}" class="customPhoto image marginAll" data-name="{{ item.data.dataName }}" alt="{{ item.data.alt }}">
-              {% endif %}
-            {% endfor %}
-          </div>
-          <div class="row">
-            {% for item in collections.gallery %}
-              {% if item.data.dataName == "Bapteme" %}
-               <img src="/images/{{ item.data.src }}" class="customPhoto image marginAll" data-name="{{ item.data.dataName }}" alt="{{ item.data.alt }}">
-              {% endif %}
-            {% endfor %}
-          </div>
-          <div class="row">
-            {% for item in collections.gallery %}
-              {% if item.data.dataName == "Grossesse" %}
-                <img src="{{ item.data.src | url }}" class="customPhoto image marginAll" data-name="{{ item.data.dataName }}" alt="{{ item.data.alt }}">
-              {% endif %}
-            {% endfor %}
-          </div>
+        <div class="row">
+          {% for item in collections.gallery %}
+            {% if item.data.dataName == "Portrait" %}
+              <img src="/images/{{ item.data.filename }}" class="customPhoto image marginAll" data-name="{{ item.data.dataName }}" alt="{{ item.data.alt }}">
+            {% endif %}
+          {% endfor %}
         </div>
+        <div class="row">
+          {% for item in collections.gallery %}
+            {% if item.data.dataName == "Couple" %}
+              <img src="/images/{{ item.data.filename }}" class="customPhoto image marginAll" data-name="{{ item.data.dataName }}" alt="{{ item.data.alt }}">
+            {% endif %}
+          {% endfor %}
+        </div>
+        <div class="row">
+          {% for item in collections.gallery %}
+            {% if item.data.dataName == "Bapteme" %}
+              <img src="/images/{{ item.data.filename }}" class="customPhoto image marginAll" data-name="{{ item.data.dataName }}" alt="{{ item.data.alt }}">
+            {% endif %}
+          {% endfor %}
+        </div>
+      </div>
+      <div class="col-6" id="colTwo">
+        <div class="row">
+          {% for item in collections.gallery %}
+            {% if item.data.dataName == "Mariage" %}
+              <img src="/images/{{ item.data.filename }}" class="customPhoto image marginAll" data-name="{{ item.data.dataName }}" alt="{{ item.data.alt }}">
+            {% endif %}
+          {% endfor %}
+        </div>
+        <div class="row">
+          {% for item in collections.gallery %}
+            {% if item.data.dataName == "Grossesse" %}
+              <img src="/images/{{ item.data.filename }}" class="customPhoto image marginAll" data-name="{{ item.data.dataName }}" alt="{{ item.data.alt }}">
+            {% endif %}
+          {% endfor %}
+        </div>
+      </div>
+
+
       </div>
     </div>
   </section>

@@ -56,12 +56,12 @@ client.getEntries({
 })
   .then((response) => {
     const images = response.items; // Liste des images récupérées depuis Contentful
+    const imageElements = document.querySelectorAll('.customPhoto[data-name]'); // Sélectionner tous les éléments HTML correspondant aux images
 
     // Mettre à jour le contenu des éléments HTML avec les images récupérées
-    images.forEach((image) => {
+    images.forEach((image, index) => {
       const imageURL = image.fields.image.fields.file.url; // Récupérer le chemin d'accès à l'image depuis Contentful
-      const imageElement = document.querySelector('img.customPhoto[data-name="Famille"]');
-      // Trouver l'élément HTML correspondant à l'image
+      const imageElement = imageElements[index]; // Accéder à l'élément HTML correspondant à l'index actuel
 
       if (imageElement) {
         imageElement.src = imageURL; // Mettre à jour le chemin d'accès à l'image dans l'élément HTML
@@ -69,4 +69,3 @@ client.getEntries({
     });
   })
   .catch(console.error);
-

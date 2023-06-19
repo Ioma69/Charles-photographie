@@ -3,6 +3,7 @@ backend:
   branch: main 
 
 media_folder: "src/images"
+public_folder: "/src/images
 
 collections:
   - name: "gallery"

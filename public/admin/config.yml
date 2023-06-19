@@ -9,7 +9,7 @@ collections:
   - name: "gallery"
     label: "Gallery"
     folder: "src/images" 
-    create: true
+    create: false
     fields:
       - { name: "src", label: "Image", widget: "image" }
       - { name: "alt", label: "Alt Text", widget: "string" }

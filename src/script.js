@@ -61,7 +61,7 @@ client.getEntries({
     images.forEach((image) => {
       const imageId = image.sys.id;
       const imageFields = image.fields;
-
+console.log(imageId, imageFields);
       if (imageFields && imageFields.file) {
         const imageURL = imageFields.file.url;
         const imageElement = document.getElementById(imageId);

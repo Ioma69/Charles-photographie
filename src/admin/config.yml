@@ -5,10 +5,11 @@ backend:
 media_folder: "src/images"
 
 collections:
-  - name: articles
-    label: Articles
-    folder: _articles
-    create: true
+  - name: "gallery"
+    label: "Gallery"
+    folder: "src/images"
+    create: false
     fields:
-      - { name: title, label: Title, widget: string }
-      - { name: body, label: Body, widget: markdown }
+      - { name: "src", label: "Image", widget: "image" }
+      - { name: "alt", label: "Alt Text", widget: "string" }
+      - { name: "dataName", label: "Data Name", widget: "string" }

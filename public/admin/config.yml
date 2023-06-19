@@ -8,9 +8,10 @@ public_folder: "/images"
 collections:
   - name: "gallery"
     label: "Gallery"
-    folder: "/images"
+    folder: "src/images" 
     create: false
     fields:
       - { name: "src", label: "Image", widget: "image" }
       - { name: "alt", label: "Alt Text", widget: "string" }
       - { name: "dataName", label: "Data Name", widget: "string" }
+

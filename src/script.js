@@ -40,7 +40,8 @@ onload = () => {
 }
 
 
-import * as contentful from 'contentful';
+<script type="module">
+import * as contentful from 'https://cdn.jsdelivr.net/npm/contentful@7.14.1/dist/contentful.browser.min.js';
 
 const client = contentful.createClient({
   space: 'dj69i7y41zl2',
@@ -67,3 +68,4 @@ client.getEntries({
   })
   .catch(console.error);
 
+</script>

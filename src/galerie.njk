@@ -19,6 +19,11 @@ layout: 'base2.njk'
                     <button class="item btn btn-secondary d-flex me-3 mt-2 justify-content-center shadow" data-name="Couple">Couple</button>
                   </div>
                   <div class="col-6" id="colOne">
+                    {% for image in collections.gallery %}
+                    <div class="row">
+                      <img src="{{image.data.src}}" class="customPhoto image marginAll" data-name="{{image.data.dataName}}" alt="{{image.data.alt}}">
+                    </div>
+                  
                     <div class="row active">
                       <img src="/images/famille coucher de soleil.jpg" class="customPhoto image show marginAll" data-name="Famille" alt="">
                     </div>
@@ -39,11 +44,6 @@ layout: 'base2.njk'
                     </div>
                   </div>
                 <div class="col-6" id="colTwo">
-                  {% for image in collections.gallery %}
-                    <div class="row">
-                      <img src="{{image.data.src}}" class="customPhoto image marginAll" data-name="{{image.data.dataName}}" alt="{{image.data.alt}}">
-                    </div>
-                  {% endfor %}
                   <div class="row">
                     <img src="/images/Couple mariés.jpg" class="customPhoto image marginAll" data-name="Mariage" alt="">
                   </div>
@@ -63,7 +63,7 @@ layout: 'base2.njk'
                     <img src="/images/grossesse 3.jpg" class="customPhoto image marginAll" data-name="Grossesse" alt="">
                   </div>
                 </div>
-
+                {% endfor %}
                 </div>
               </div>
             </section>

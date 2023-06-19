@@ -5,7 +5,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="description" content="Passionné de photographie depuis mon plus jeune âge, je capture tout les instants de votre vie, grossesse, naissance, bébés, enfants, famille, mariage.">
-        <title>CHARLES CANTIN - GALLERIE</title>
+        <title></title>
         <link rel="stylesheet" href="/style.css">
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
@@ -16,6 +16,12 @@
         integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
         <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+        <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+
+
+
+        
+
     </head>
     <body class="backgroundColor">
         <header>
@@ -59,78 +65,17 @@
     </nav>
   </header>
         
-
-        <main class="w-100 h-100 position-absolute customMarginGallery">
-            <section class="backgroundColor">
-              <div class="container">
-                <div class="row">
-                  <h3 class="text-center text-uppercase mb-5 mt-5 customGallery">Decouvrez ma galerie photo</h3>
-                  <div class="items row-cols-12 mb-5 d-flex justify-content-center flex-wrap">
-                    <button class="item active btn btn-secondary me-3 mt-2 d-flex justify-content-center shadow" data-name="Tout">Tout</button>
-                    <button class="item btn btn-secondary d-flex me-3 mt-2 justify-content-center shadow" data-name="Mariage">Mariage</button>
-                    <button class="item btn btn-secondary d-flex me-3 mt-2 justify-content-center shadow" data-name="Famille">Famille</button>
-                    <button class="item btn btn-secondary d-flex me-3 mt-2 justify-content-center shadow" data-name="Grossesse">Grossesse</button>
-                    <button class="item btn btn-secondary d-flex me-3 mt-2 justify-content-center shadow" data-name="Bapteme">Bapteme</button>
-                    <button class="item btn btn-secondary d-flex me-3 mt-2 justify-content-center shadow" data-name="Portrait">Portrait</button>
-                    <button class="item btn btn-secondary d-flex me-3 mt-2 justify-content-center shadow" data-name="Couple">Couple</button>
-                  </div>
-                  <div class="col-6" id="colOne">
-                    <div class="row active">
-                      <img src="/images/famille coucher de soleil.jpg" class="customPhoto image show marginAll" data-name="Famille" alt="">
-                    </div>
-                    <div class="row">
-                      <img src="/images/famille allongée.jpg" class="customPhoto image marginAll" data-name="Famille" alt="">
-                    </div>
-                    <div class="row">
-                      <img src="/images/portrait femme.jpg" class="customPhoto image marginAll" data-name="Portrait" alt="">
-                    </div>
-                    <div class="row">
-                      <img src="/images/portrait homme.jpg" class="customPhoto image marginAll" data-name="Portrait" alt="">
-                    </div>
-                    <div class="row">
-                      <img src="/images/couple nuit.jpg" class="customPhoto image marginAll" data-name="Couple" alt="">
-                    </div>
-                    <div class="row">
-                      <img src="/images/couple lecture.jpg" class="customPhoto image marginAll" data-name="Couple" alt="">
-                    </div>
-                  </div>
-                  <div class="col-6" id="colTwo">
-                    <div class="row" >
-                      <img src="/images/mariage.jpg" class="customPhoto image marginAll" data-name="Mariage" alt="">
-                    </div>
-                    <div class="row">
-                      <img src="/images/Couple mariés.jpg" class="customPhoto image marginAll" data-name="Mariage" alt="">
-                    </div>
-                    <div class="row">
-                      <img src="/images/bapteme 3.jpg" class="customPhoto image marginAll" data-name="Bapteme" alt="">
-                    </div>
-                    <div class="row">
-                      <img src="/images/bapteme 2.jpg" class="customPhoto image marginAll" data-name="Bapteme" alt="">
-                    </div>
-                    <div class="row">
-                      <img src="/images/grossesse.jpg" class="customPhoto image marginAll" data-name="Grossesse" alt="">
-                    </div>
-                    <div class="row">
-                      <img src="/images/grossesse 2.jpg" class="customPhoto image marginAll" data-name="Grossesse" alt="">
-                    </div>
-                    <div class="row">
-                      <img src="/images/grossesse 3.jpg" class="customPhoto image marginAll" data-name="Grossesse" alt="">
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </section>
-                <footer>
-                    <p class="footerStyle text-center text-white mt-5 d-flex flex-column justify-content-center fs-6">@2023 Charles Cantin Photographie <br> Tout Droits Reservés</p>
-                </footer>
-        </main>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
-        crossorigin="anonymous"></script>
-        <script src="/script.js"></script>
-
-
-        <script src="" async defer></script>
+        <script>
+        if (window.netlifyIdentity) {
+            window.netlifyIdentity.on("init", user => {
+            if (!user) {
+                window.netlifyIdentity.on("login", () => {
+                document.location.href = "/admin/";
+                });
+            }
+            });
+        }
+</script>
     </body>
 </html>
 

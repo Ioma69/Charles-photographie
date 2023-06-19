@@ -15,7 +15,7 @@
           {% for image in images %}
           {% if loop.index <= 6 %}
           <div class="row{% if loop.index == 1 %} active{% endif %}">
-            <img src="{{ image.src }}" class="customPhoto image marginAll" data-name="{{ image.dataName }}" alt="{{ image.alt }}">
+            <img src="/images/{{ image.src }}" class="customPhoto image marginAll" data-name="{{ image.dataName }}" alt="{{ image.alt }}">
           </div>
           {% endif %}
           {% endfor %}
@@ -24,7 +24,7 @@
           {% for image in images %}
           {% if loop.index > 6 %}
           <div class="row">
-            <img src="{{ image.src }}" class="customPhoto image marginAll" data-name="{{ image.dataName }}" alt="{{ image.alt }}">
+            <img src="/images/{{ image.src }}" class="customPhoto image marginAll" data-name="{{ image.dataName }}" alt="{{ image.alt }}">
           </div>
           {% endif %}
           {% endfor %}

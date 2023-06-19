@@ -3,12 +3,12 @@ backend:
   branch: main 
 
 media_folder: "public/images"
-public_folder: "images/"
+public_folder: "/images"
 
 collections:
   - name: "gallery"
     label: "Gallery"
-    folder: "images/" 
+    folder: "src/images" 
     create: true
     fields:
       - { name: "src", label: "Image", widget: "image" }

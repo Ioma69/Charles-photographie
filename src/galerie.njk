@@ -21,21 +21,21 @@ layout: 'base2.njk'
           <div class="row active">
             {% for item in collections.gallery %}
               {% if item.data.dataName == "Famille" %}
-                <img src="{{ item.data.src | url }}" class="customPhoto image marginAll" data-name="{{ item.data.dataName }}" alt="{{ item.data.alt }}">
+                <img src="/images/{{ item.data.src }}" class="customPhoto image marginAll" data-name="{{ item.data.dataName }}" alt="{{ item.data.alt }}">
               {% endif %}
             {% endfor %}
           </div>
           <div class="row">
             {% for item in collections.gallery %}
               {% if item.data.dataName == "Portrait" %}
-                <img src="{{ item.data.src | url }}" class="customPhoto image marginAll" data-name="{{ item.data.dataName }}" alt="{{ item.data.alt }}">
+               <img src="/images/{{ item.data.src }}" class="customPhoto image marginAll" data-name="{{ item.data.dataName }}" alt="{{ item.data.alt }}">
               {% endif %}
             {% endfor %}
           </div>
           <div class="row">
             {% for item in collections.gallery %}
               {% if item.data.dataName == "Couple" %}
-                <img src="{{ item.data.src | url }}" class="customPhoto image marginAll" data-name="{{ item.data.dataName }}" alt="{{ item.data.alt }}">
+                <img src="/images/{{ item.data.src }}" class="customPhoto image marginAll" data-name="{{ item.data.dataName }}" alt="{{ item.data.alt }}">
               {% endif %}
             {% endfor %}
           </div>
@@ -44,14 +44,14 @@ layout: 'base2.njk'
           <div class="row">
             {% for item in collections.gallery %}
               {% if item.data.dataName == "Mariage" %}
-                <img src="{{ item.data.src | url }}" class="customPhoto image marginAll" data-name="{{ item.data.dataName }}" alt="{{ item.data.alt }}">
+                <img src="/images/{{ item.data.src }}" class="customPhoto image marginAll" data-name="{{ item.data.dataName }}" alt="{{ item.data.alt }}">
               {% endif %}
             {% endfor %}
           </div>
           <div class="row">
             {% for item in collections.gallery %}
               {% if item.data.dataName == "Bapteme" %}
-                <img src="{{ item.data.src | url }}" class="customPhoto image marginAll" data-name="{{ item.data.dataName }}" alt="{{ item.data.alt }}">
+               <img src="/images/{{ item.data.src }}" class="customPhoto image marginAll" data-name="{{ item.data.dataName }}" alt="{{ item.data.alt }}">
               {% endif %}
             {% endfor %}
           </div>

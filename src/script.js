@@ -60,10 +60,10 @@ client.getEntries({
 
     // Mettre à jour le contenu des éléments HTML avec les images récupérées
     images.forEach((image) => {
-      const imageURL = image.fields.file.url;
+      const imageURL = image.fields.image.fields.file.url;
       const imageId = image.fields.id; // Utiliser le champ "id" de l'image dans Contentful comme correspondance
       const imageElement = document.getElementById(imageId); // Sélectionner l'élément HTML avec l'ID correspondant
-
+      
       if (imageElement) {
         imageElement.src = imageURL; // Mettre à jour le chemin d'accès à l'image dans l'élément HTML
       }

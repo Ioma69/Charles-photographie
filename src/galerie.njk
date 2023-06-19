@@ -41,7 +41,7 @@ layout: 'base2.njk'
                 <div class="col-6" id="colTwo">
                   {% for image in collections.gallery %}
                     <div class="row">
-                      <img src="{{image.data.bapteme.jpg}}" class="customPhoto image marginAll" data-name="{{image.data.dataName}}" alt="{{image.data.alt}}">
+                      <img src="{{image.data.src}}" class="customPhoto image marginAll" data-name="{{image.data.dataName}}" alt="{{image.data.alt}}">
                     </div>
                   {% endfor %}
                   <div class="row">

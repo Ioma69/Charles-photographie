@@ -57,7 +57,7 @@ client.getEntries({
   .then((response) => {
     const images = response.items; // Liste des images récupérées depuis Contentful
   
-
+    console.log(response.items)
     // Mettre à jour le contenu des éléments HTML avec les images récupérées
     images.forEach((image) => {
       const imageURL = image.fields.image.fields.file.url;

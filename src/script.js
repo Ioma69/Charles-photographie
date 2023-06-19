@@ -60,11 +60,15 @@ client.getEntries({
 
     images.forEach((image) => {
       const imageId = image.sys.id;
-      const imageURL = image.fields[imageId].fields.file.url;
-      const imageElement = document.getElementById(imageId);
+      const imageFields = image.fields;
 
-      if (imageElement) {
-        imageElement.src = imageURL;
+      if (imageFields && imageFields.file) {
+        const imageURL = imageFields.file.url;
+        const imageElement = document.getElementById(imageId);
+
+        if (imageElement) {
+          imageElement.src = imageURL;
+        }
       }
     });
   })

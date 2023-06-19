@@ -2,13 +2,13 @@ backend:
   name: git-gateway
   branch: main 
 
-media_folder: "src/images"
-public_folder: "/images"
+media_folder: "public/images"
+public_folder: "images/"
 
 collections:
   - name: "gallery"
     label: "Gallery"
-    folder: "src/images" 
+    folder: "images/" 
     create: true
     fields:
       - { name: "src", label: "Image", widget: "image" }

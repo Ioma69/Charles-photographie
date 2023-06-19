@@ -46,7 +46,7 @@ onload = () => {
 
 const client = contentful.createClient({
   space: 'dj69i7y41zl2',
-  accessToken: "CONTENTFUL_ACCESS_TOKEN",
+  accessToken: "8vXSpQIN19zqkIo-HT4m9nCkimiNWqno0mqD_bRaIHI",
   host: "cdn.contentful.com"
 });
 

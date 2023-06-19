@@ -1,12 +1,6 @@
 ---
 title: CHARLES CANTIN - GALLERIE
 layout: 'base2.njk'
-images:
-  - src: "/images/famille coucher de soleil.jpg"
-    alt: "Famille coucher de soleil"
-  - src: "/images/famille allongée.jpg"
-    alt: "Famille allongée"
-  # Ajoutez d'autres images ici
 ---
 
 
@@ -44,29 +38,32 @@ images:
                       <img src="/images/couple lecture.jpg" class="customPhoto image marginAll" data-name="Couple" alt="">
                     </div>
                   </div>
-                  <div class="col-6" id="colTwo">
-                    <div class="row" >
-                      <img src="/images/mariage.jpg" class="customPhoto image marginAll" data-name="Mariage" alt="">
-                    </div>
+                <div class="col-6" id="colTwo">
+                  {% for image in collections.gallery %}
                     <div class="row">
-                      <img src="/images/Couple mariés.jpg" class="customPhoto image marginAll" data-name="Mariage" alt="">
+                      <img src="{{image.data.src}}" class="customPhoto image marginAll" data-name="{{image.data.dataName}}" alt="{{image.data.alt}}">
                     </div>
-                    <div class="row">
-                      <img src="/images/bapteme 3.jpg" class="customPhoto image marginAll" data-name="Bapteme" alt="">
-                    </div>
-                    <div class="row">
-                      <img src="/images/bapteme 2.jpg" class="customPhoto image marginAll" data-name="Bapteme" alt="">
-                    </div>
-                    <div class="row">
-                      <img src="/images/grossesse.jpg" class="customPhoto image marginAll" data-name="Grossesse" alt="">
-                    </div>
-                    <div class="row">
-                      <img src="/images/grossesse 2.jpg" class="customPhoto image marginAll" data-name="Grossesse" alt="">
-                    </div>
-                    <div class="row">
-                      <img src="/images/grossesse 3.jpg" class="customPhoto image marginAll" data-name="Grossesse" alt="">
-                    </div>
+                  {% endfor %}
+                  <div class="row">
+                    <img src="/images/Couple mariés.jpg" class="customPhoto image marginAll" data-name="Mariage" alt="">
                   </div>
+                  <div class="row">
+                    <img src="/images/bapteme 3.jpg" class="customPhoto image marginAll" data-name="Bapteme" alt="">
+                  </div>
+                  <div class="row">
+                    <img src="/images/bapteme 2.jpg" class="customPhoto image marginAll" data-name="Bapteme" alt="">
+                  </div>
+                  <div class="row">
+                    <img src="/images/grossesse.jpg" class="customPhoto image marginAll" data-name="Grossesse" alt="">
+                  </div>
+                  <div class="row">
+                    <img src="/images/grossesse 2.jpg" class="customPhoto image marginAll" data-name="Grossesse" alt="">
+                  </div>
+                  <div class="row">
+                    <img src="/images/grossesse 3.jpg" class="customPhoto image marginAll" data-name="Grossesse" alt="">
+                  </div>
+                </div>
+
                 </div>
               </div>
             </section>

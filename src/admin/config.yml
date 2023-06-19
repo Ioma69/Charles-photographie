@@ -2,12 +2,12 @@ backend:
   name: git-gateway
   branch: main 
 
-media_folder: "src/images"
+media_folder: "images"
 
 collections:
   - name: "gallery"
     label: "Gallery"
-    folder: "src/images"
+    folder: "images"
     create: false
     fields:
       - { name: "src", label: "Image", widget: "image" }

@@ -42,9 +42,11 @@ onload = () => {
 
 
 
+const accessToken = "CONTENTFUL_ACCESS_TOKEN";
+
 const client = contentful.createClient({
   space: 'dj69i7y41zl2',
-  accessToken: CONTENTFUL_ACCESS_TOKEN
+  accessToken: accessToken
 });
 
 // Récupérer les données des images depuis Contentful

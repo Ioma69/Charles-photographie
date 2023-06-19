@@ -48,14 +48,17 @@ const client = contentful.createClient({
 });
 
 // Récupérer les données des images depuis Contentful
-client.getEntries()
+client.getEntries({
+  content_type: 'images' // Spécifier le CONTENT TYPE ID
+})
   .then((response) => {
     const images = response.items; // Liste des images récupérées depuis Contentful
 
     // Mettre à jour le contenu des éléments HTML avec les images récupérées
     images.forEach((image) => {
-      const imageURL = image.fields.imageURL; // Récupérer le chemin d'accès à l'image depuis Contentful
-      const imageElement = document.querySelector(`img[data-name="${image.fields.name}"]`); // Trouver l'élément HTML correspondant à l'image
+      const imageURL = image.fields.image.fields.file.url; // Récupérer le chemin d'accès à l'image depuis Contentful
+      const imageElement = document.querySelector('img.customPhoto[data-name="Famille"]');
+      // Trouver l'élément HTML correspondant à l'image
 
       if (imageElement) {
         imageElement.src = imageURL; // Mettre à jour le chemin d'accès à l'image dans l'élément HTML
@@ -63,3 +66,4 @@ client.getEntries()
     });
   })
   .catch(console.error);
+

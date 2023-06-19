@@ -50,22 +50,21 @@ const client = contentful.createClient({
   host: "cdn.contentful.com"
 });
 
+
 // Récupérer les données des images depuis Contentful
 client.getEntries({
   content_type: 'images' // Spécifier le CONTENT TYPE ID
 })
   .then((response) => {
-    const images = response.items; // Liste des images récupérées depuis Contentful
-  
-    console.log(response.items)
-    // Mettre à jour le contenu des éléments HTML avec les images récupérées
+    const images = response.items;
+
     images.forEach((image) => {
-      const imageURL = image.fields.image.fields.file.url;
-      const imageId = image.sys.id; // Utiliser le champ "id" de l'image dans Contentful comme correspondance
-      const imageElement = document.getElementById(imageId); // Sélectionner l'élément HTML avec l'ID correspondant
-      
+      const imageId = image.sys.id;
+      const imageURL = image.fields[imageId].fields.file.url;
+      const imageElement = document.getElementById(imageId);
+
       if (imageElement) {
-        imageElement.src = imageURL; // Mettre à jour le chemin d'accès à l'image dans l'élément HTML
+        imageElement.src = imageURL;
       }
     });
   })

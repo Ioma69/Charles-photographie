@@ -64,8 +64,9 @@ client.getEntries({
 
       if (imageFields) {
         const imageTitle = imageFields.title; // Récupérer le titre de l'image
-        const imageURL = imageFields.file.url;
-        console.log(imageTitle, imageURL);
+        const imageURL = imageFields.file && imageFields.file.url;
+        console.log(imageFields.title, imageFields.file);
+
 
         // Sélectionner l'élément HTML en utilisant l'attribut data-title correspondant au titre de l'image
         const imageElement = document.querySelector(`[data-title="${imageTitle}"]`);

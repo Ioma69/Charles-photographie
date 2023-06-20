@@ -59,19 +59,22 @@ client.getEntries({
     console.log(images);
 
     images.forEach((image) => {
-      const imageId = image.fields.id; // Utiliser le champ "id" de l'image dans Contentful comme correspondance
-      const imageFields = image.fields.image.fields; // Accéder aux champs de l'image
+      if (image.fields && image.fields.file) { // Vérifier si la propriété "fields" est définie
+        const imageId = image.sys.id;
+        const imageFields = image.fields.image.fields;
 
-      console.log("Image ID:", imageId);
+        console.log("Image ID:", imageId);
 
-      if (imageFields && imageFields.file) {
-        const imageURL = imageFields.file.url;
-        const imageElement = document.getElementById(imageId);
+        if (imageFields && imageFields.file) {
+          const imageURL = imageFields.file.url;
+          const imageElement = document.getElementById(imageId);
 
-        if (imageElement) {
-          imageElement.src = imageURL;
+          if (imageElement) {
+            imageElement.src = imageURL;
+          }
         }
       }
     });
   })
   .catch(console.error);
+

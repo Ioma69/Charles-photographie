@@ -57,21 +57,23 @@ client.getEntries({
 })
   .then((response) => {
     const images = response.items;
-    console.log(images);
+   
 
     images.forEach((entry) => {
       const imageFields = entry.fields;
-      console.log(imageFields);
 
+
+      // Parcourir toutes les clés de l'objet imageFields
       Object.keys(imageFields).forEach((imageKey) => {
         const image = imageFields[imageKey];
         const imageTitle = image.fields.title;
         const imageURL = image.fields.file.url;
-        console.log(imageTitle, imageURL);
+       
 
         // Sélectionner l'élément HTML en utilisant l'attribut data-title correspondant au titre de l'image
         const imageElement = document.querySelector(`[data-title="${imageTitle}"]`);
 
+        // Vérifier si l'élément HTML a été trouvé
         if (imageElement) {
           imageElement.src = imageURL;
         }

@@ -60,7 +60,7 @@ client.getEntries({
 
     images.forEach((image) => {
       const imageFields = image.fields;
-
+      console.log(imageFields);
       if (imageFields) {
         const imageLink = imageFields.image;
         const imageTitle = imageLink.fields.title; // Récupérer le titre de l'image

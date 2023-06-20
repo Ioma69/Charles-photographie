@@ -66,8 +66,8 @@ client.getEntries({
         const imageTitle = imageLink.fields.title; // Récupérer le titre de l'image
         const imageURL = imageLink.fields.file.url;
 
-        // Sélectionner l'élément HTML en utilisant l'ID correspondant au titre de l'image
-        const imageElement = document.getElementById(imageTitle);
+        // Sélectionner l'élément HTML en utilisant l'attribut data-title correspondant au titre de l'image
+        const imageElement = document.querySelector(`[data-title="${imageTitle}"]`);
 
         if (imageElement) {
           imageElement.src = imageURL;
@@ -76,5 +76,6 @@ client.getEntries({
     });
   })
   .catch(console.error);
+
 
 

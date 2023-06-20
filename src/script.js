@@ -60,19 +60,18 @@ client.getEntries({
     console.log(images);
 
     images.forEach((image) => {
-      if (image.fields && image.fields.file) { // Vérifier si la propriété "fields" est définie
-        const imageId = image.sys.id;
-        const imageFields = image.fields.image.fields;
+      const imageId = image.sys.id;
+      const imageFields = image.fields;
 
-        console.log(imageId);
+      console.log(imageId);
 
-        if (imageFields && imageFields.file) {
-          const imageURL = imageFields.file.url;
-          const imageElement = document.getElementById(imageId);
+      if (imageFields && imageFields.image) {
+        const imageLink = imageFields.image;
+        const imageURL = imageLink.fields.file.url;
+        const imageElement = document.getElementById(imageId);
 
-          if (imageElement) {
-            imageElement.src = imageURL;
-          }
+        if (imageElement) {
+          imageElement.src = imageURL;
         }
       }
     });

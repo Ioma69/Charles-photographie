@@ -59,13 +59,14 @@ client.getEntries({
     const images = response.items;
     console.log(images);
 
-    images.forEach((image) => {
-      const imageFields = image.fields;
+    images.forEach((entry) => {
+      const imageFields = entry.fields;
       console.log(imageFields);
 
-      if (imageFields) {
-        const imageTitle = imageFields.title; // Récupérer le titre de l'image
-        const imageURL = imageFields.file && imageFields.file.url;
+      Object.keys(imageFields).forEach((imageKey) => {
+        const image = imageFields[imageKey];
+        const imageTitle = image.fields.title;
+        const imageURL = image.fields.file.url;
         console.log(imageTitle, imageURL);
 
         // Sélectionner l'élément HTML en utilisant l'attribut data-title correspondant au titre de l'image
@@ -74,7 +75,7 @@ client.getEntries({
         if (imageElement) {
           imageElement.src = imageURL;
         }
-      }
+      });
     });
   })
   .catch(console.error);

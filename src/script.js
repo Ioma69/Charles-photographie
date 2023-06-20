@@ -58,7 +58,7 @@ client.getEntries({
   .then((response) => {
     const images = response.items;
    
-
+    console.log(images);
     images.forEach((entry) => {
       const imageFields = entry.fields;
 

@@ -50,6 +50,7 @@ const client = contentful.createClient({
   accessToken: "8vXSpQIN19zqkIo-HT4m9nCkimiNWqno0mqD_bRaIHI",
   host: "cdn.contentful.com"
 });
+
 // Récupérer les données des images depuis Contentful
 client.getEntries({
   content_type: 'images' // Spécifier le CONTENT TYPE ID
@@ -65,8 +66,7 @@ client.getEntries({
       if (imageFields) {
         const imageTitle = imageFields.title; // Récupérer le titre de l'image
         const imageURL = imageFields.file && imageFields.file.url;
-        console.log(imageFields.title, imageFields.file);
-
+        console.log(imageTitle, imageURL);
 
         // Sélectionner l'élément HTML en utilisant l'attribut data-title correspondant au titre de l'image
         const imageElement = document.querySelector(`[data-title="${imageTitle}"]`);
@@ -78,5 +78,6 @@ client.getEntries({
     });
   })
   .catch(console.error);
+
 
 

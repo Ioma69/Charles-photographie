@@ -63,8 +63,8 @@ client.getEntries({
       console.log(imageFields);
 
       if (imageFields) {
-        const imageTitle = imageFields.fields.title; // Récupérer le titre de l'image
-        const imageURL = imageFields.fields.file.url;
+        const imageTitle = imageFields.title; // Récupérer le titre de l'image
+        const imageURL = imageFields.file.url;
         console.log(imageTitle, imageURL);
 
         // Sélectionner l'élément HTML en utilisant l'attribut data-title correspondant au titre de l'image
@@ -77,6 +77,5 @@ client.getEntries({
     });
   })
   .catch(console.error);
-
 
 

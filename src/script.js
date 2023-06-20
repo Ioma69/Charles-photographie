@@ -61,7 +61,7 @@ client.getEntries({
 
     images.forEach((image) => {
       const imageId = image.sys.id;
-      const imageFields = image.fields;
+      const imageFields = image.fields.title;
 
       console.log(imageFields);
 

@@ -43,6 +43,13 @@ onload = () => {
 
 
 
+
+const client = contentful.createClient({
+  space: 'dj69i7y41zl2',
+  environment: "master",
+  accessToken: "8vXSpQIN19zqkIo-HT4m9nCkimiNWqno0mqD_bRaIHI",
+  host: "cdn.contentful.com"
+});
 // Récupérer les données des images depuis Contentful
 client.getEntries({
   content_type: 'images' // Spécifier le CONTENT TYPE ID
@@ -60,7 +67,7 @@ client.getEntries({
         const imageURL = imageLink.fields.file.url;
 
         // Sélectionner l'élément HTML en utilisant l'ID correspondant au titre de l'image
-        const imageElement = document.getElementById(imageTitle.toLowerCase()); // Utiliser toLowerCase() pour rendre les IDs non sensibles à la casse
+        const imageElement = document.getElementById(imageTitle);
 
         if (imageElement) {
           imageElement.src = imageURL;
@@ -69,3 +76,5 @@ client.getEntries({
     });
   })
   .catch(console.error);
+
+

@@ -61,7 +61,7 @@ client.getEntries({
     images.forEach((image) => {
       const imageFields = image.fields;
 
-      if (imageFields && imageFields.image) {
+      if (imageFields) {
         const imageLink = imageFields.image;
         const imageTitle = imageLink.fields.title; // Récupérer le titre de l'image
         const imageURL = imageLink.fields.file.url;

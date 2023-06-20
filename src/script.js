@@ -50,7 +50,6 @@ const client = contentful.createClient({
   accessToken: "8vXSpQIN19zqkIo-HT4m9nCkimiNWqno0mqD_bRaIHI",
   host: "cdn.contentful.com"
 });
-
 // Récupérer les données des images depuis Contentful
 client.getEntries({
   content_type: 'images' // Spécifier le CONTENT TYPE ID
@@ -60,15 +59,13 @@ client.getEntries({
     console.log(images);
 
     images.forEach((image) => {
-      const imageId = image.sys.id;
       const imageFields = image.fields;
-
-      console.log(imageFields);
 
       if (imageFields && imageFields.image) {
         const imageLink = imageFields.image;
+        const imageTitle = imageLink.fields.title; // Récupérer le titre de l'image
         const imageURL = imageLink.fields.file.url;
-        const imageElement = document.getElementById(imageId);
+        const imageElement = document.getElementById(imageTitle); // Utiliser le titre comme ID de l'élément
 
         if (imageElement) {
           imageElement.src = imageURL;

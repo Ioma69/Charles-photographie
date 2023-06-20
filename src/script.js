@@ -63,7 +63,7 @@ client.getEntries({
       const imageId = image.sys.id;
       const imageFields = image.fields;
 
-      console.log(imageId);
+      console.log(imageFields);
 
       if (imageFields && imageFields.image) {
         const imageLink = imageFields.image;
